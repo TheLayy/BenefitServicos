@@ -1,0 +1,28 @@
+.socialSection {
+  border: 2px solid red !important;
+  background-color: var(--color-sandybrown);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  text-align: center;
+  font-size: var(--font-size-29xl);
+  color: var(--escuro);
+  font-family: var(--font-fontawesome);
+}
+
+.socialIcons {
+  border: 1px solid green;
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  margin: 5%;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-23xl);
+  letter-spacing: -0.4px;
+  line-height: 3.25rem;
+  display: inline-block;
+  font-family: var(--font-inter);
+}

@@ -1,0 +1,92 @@
+.footer2 {
+  background-color: var(--color-midnightblue-100);
+  width: 1400px;
+  height: 73px;
+}
+.text {
+  font-weight: 600;
+}
+.footer1 {
+  width: 1400px;
+  height: 73px;
+  text-align: center;
+  color: var(--colors-white);
+}
+.logoFooterIcon {
+  width: 221px;
+  height: 91px;
+  object-fit: cover;
+}
+.mingcutephoneFillIcon {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.b,
+.textFooter {
+  width: 204px;
+  height: 30px;
+  font-size: var(--font-size-xl);
+}
+.relacionamentobenefitservicos,
+.textFooter1 {
+  width: 448px;
+  height: 30px;
+  font-size: var(--font-size-lgi-8);
+}
+.textFooter2 {
+  width: 451px;
+  height: 30px;
+  font-size: var(--text-label-size);
+}
+.contato,
+.produtos,
+.sobreNs {
+  font-weight: 800;
+  display: inline-block;
+  width: 92px;
+  height: 19.5px;
+}
+.contato,
+.produtos {
+  width: 96.2px;
+}
+.contato {
+  width: 82.5px;
+}
+.menuFooter {
+  width: 96.2px;
+  height: 91.5px;
+  text-align: center;
+  color: var(--escuro);
+}
+.icon {
+  width: 40px;
+  height: 40px;
+}
+.label {
+  line-height: 28px;
+  font-weight: 500;
+  text-shadow: 1px 0 0#fff, 0 1px 0#fff, -1px 0 0#fff, 0-1px 0#fff;
+}
+.iconParent,
+.link {
+  width: 363px;
+  height: 40px;
+}
+.link {
+  top: 330px;
+  left: 289px;
+  font-size: var(--font-size-xl);
+}
+.footer {
+  width: 1400px;
+  background-color: var(--claro);
+  max-width: 100%;
+  height: 510px;
+  overflow: hidden;
+  text-align: left;
+  font-size: var(--text-paragraph-size);
+  color: var(--color-midnightblue-100);
+  font-family: var(--font-inter);
+}

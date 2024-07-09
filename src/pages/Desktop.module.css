@@ -1,0 +1,10 @@
+.whatsappIcon {
+  width: 4.5rem;
+  height: 4.5rem;
+  object-fit: cover;
+  cursor: pointer;
+}
+.desktop {
+  width: 100%;
+  background-color: var(--colors-white);
+}

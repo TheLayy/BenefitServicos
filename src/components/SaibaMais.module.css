@@ -1,0 +1,18 @@
+.icon {
+  width: 41px;
+  height: 41px;
+}
+.label {
+  line-height: 28px;
+}
+.SaibaMais {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-mini);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--colors-white);
+  font-family: var(--h2);
+}

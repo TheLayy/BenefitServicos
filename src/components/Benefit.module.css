@@ -1,0 +1,22 @@
+.Benefit {
+  text-align: center;
+  max-width: 13rem;
+}
+
+.Benefit div {
+  margin: 0.6rem;
+}
+
+.tittle {
+  text-align: center;
+  font-size: var(--font-size-4xl);
+  font-family: var(--font-inter);
+  color: var(--escuro);
+  font-weight: 600;
+}
+
+.text {
+  font-size: var(--font-size-xl);
+  color: var(--colors-text);
+  line-height: 1.2rem;
+}

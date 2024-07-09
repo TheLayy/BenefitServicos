@@ -1,0 +1,29 @@
+.headingAndLink {
+  align-self: stretch;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: var(--gap-74xl);
+}
+.tokyoBrowserWindowWithEmotIcon {
+  width: 8.813rem;
+  height: 9.744rem;
+  object-fit: cover;
+}
+.card {
+  box-shadow: 0 5px 0#191a23;
+  border-radius: var(--br-26xl);
+  background-color: var(--color);
+  border: 1px solid var(--color);
+  box-sizing: border-box;
+  width: 26.438rem;
+  height: 18.438rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-31xl);
+}

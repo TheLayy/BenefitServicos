@@ -1,0 +1,20 @@
+.rectangle {
+  height: 100%;
+  width: 100%;
+  border-radius: var(--br-81xl);
+  border: 2px solid var(--colors-grey);
+  box-sizing: border-box;
+  mix-blend-mode: normal;
+}
+.yourEmail {
+  line-height: 26px;
+  font-weight: 500;
+}
+.middleDarkOutline {
+  width: 270px;
+  height: 50px;
+  text-align: left;
+  font-size: var(--buttons-middle-size);
+  color: var(--colors-text);
+  font-family: var(--text-label);
+}
