@@ -25,7 +25,7 @@ const HistorySection = ({ className = "" }) => {
           </div>
         </div>
         <div className={styles.img}>
-          <img className={styles.historyImgIcon} alt="" src="/historyimg@2x.png" />
+          <img className={styles.historyImgIcon} alt="" src="/history-img.png" />
         </div>
       </div>
     </div>

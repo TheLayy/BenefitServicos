@@ -18,7 +18,7 @@ const Footer = ({
       <div className={styles.footer1}>
         <div className={styles.footer2} />
         <div className={styles.text}>
-          ® Benefit Serviços LTDA-ME | Todos os direitos reservados | Designed
+          ® Benefit Serviços LTDA-ME | Todos os direitos reservados | Designed
           by WWLab
         </div>
       </div>

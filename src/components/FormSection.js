@@ -6,59 +6,20 @@ import styles from "./FormSection.module.css";
 const FormSection = ({ className = "" }) => {
   return (
     <div className={[styles.formSection, className].join(" ")}>
-      <img
-        className={styles.formSectionBgIcon}
-        alt=""
-        src="/formsectionbg@2x.png"
-      />
-      <div className={styles.formCard}>
-        <div className={styles.formCardBg} />
-        <div className={styles.form}>
-          <div className={styles.submitBtn}>
-            <b className={styles.enviar}>Enviar</b>
+      <div className={[styles.formContainer, "container"].join(" ")}>
+        <div className={styles.textBox}>
+          <div className={styles.title}>
+            <div>Encontre</div>
+            <div>o melhor seguro para você</div>
           </div>
-          <div className={styles.checkbox2}>
-            <div className={styles.checked}>
-              Eu concordo com os Termos de Utilização
-            </div>
-            <On
-              checkIcon="/check-icon.svg"
-              showCheckIcon
-            />
-          </div>
-          <div className={styles.checkbox1}>
-            <div className={styles.checked}>
-              Quero receber contato por WhatsApp
-            </div>
-            <On
-              checkIcon="/check-icon.svg"
-              showCheckIcon={false}
-            />
-          </div>
-          <MiddleDarkOutline
-            yourEmail="Seguro para cotar"
-          />
-          <MiddleDarkOutline
-            yourEmail="Celular"
-          />
-          <MiddleDarkOutline
-            yourEmail="E-mail"
-          />
-          <MiddleDarkOutline
-            yourEmail="Seu nome"
-          />
-          <b className={styles.formTitle}>Faça sua cotação</b>
+          <p className={styles.text}>
+            Nosso objetivo é proporcionar tranquilidade através de soluções de
+            seguro completas e acessíveis.
+          </p>
         </div>
-      </div>
-      <div className={styles.sectionText}>
-        <div className={styles.text}>
-          Nosso objetivo é proporcionar tranquilidade através de soluções de
-          seguro completas e acessíveis.
+        <div className={styles.formBox}>
+          <div className={styles.formTitle}>Faça sua cotação</div>
         </div>
-        <b className={styles.title}>
-          <p className={styles.encontre}>{`Encontre `}</p>
-          <p className={styles.encontre}>o melhor seguro para você</p>
-        </b>
       </div>
     </div>
   );

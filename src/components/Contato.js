@@ -14,21 +14,21 @@ const Contato = ({ className = "" }) => {
             </div>
             <div className={styles.info}>
               <div className={styles.infoBlock}>
-                <p>Prefere ligar?</p>
+                <div>Prefere ligar?</div>
                 <div>
                   <img src="/phone-icon.svg" alt="" />
                   <a href="1132809870">(11)3280-9870</a>
                 </div>
               </div>
               <div className={styles.infoBlock}>
-                <p>É mais chegado em e-mail?</p>
+                <div>É mais chegado em e-mail?</div>
                 <div>
                   <img src="/email-icon.svg" alt="" />
                   <a href="mailto:relacionamento@benefitservicos.com.br">relacionamento@benefitservicos.com.br</a>
                 </div>
               </div>
               <div className={styles.infoBlock}>
-                <p>Venha nos visitar</p>
+                <div>Venha nos visitar</div>
                 <div>
                   <img src="/map-icon.svg" alt="" />
                   <a href="">Av Conceição, 460, Centro, Diadema-SP CEP 099200-000</a>

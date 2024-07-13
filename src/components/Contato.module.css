@@ -19,6 +19,7 @@ div {
   max-width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: var(--gap-mini);
 }
 
 .contacts {
@@ -30,6 +31,7 @@ div {
 .map,
 .contacts {
   max-width: 49.8%;
+  min-width: 49%;
 }
 
 .tittle,
@@ -41,13 +43,17 @@ div {
 }
 
 .tittle {
+  margin: var(--gap-mini);
   font-weight: 900;
   color: var(--claro);
-  font-size: var(--font-size-9xl);
   font-size: var(--font-size-17xl);
   background-color: var(--color-midnightblue-100);
   padding: var(--padding-13xl);
   font-family: var(--font-inter);
+}
+
+.logo {
+  margin-bottom: var(--gap-mini);
 }
 
 .logo,
@@ -55,12 +61,30 @@ div {
 .map {
   background-color: var(--claro);
   padding: var(--padding-6xs);
-  font-size: var(--font-size-xl);
+  font-size: var(--text-label-size);
   color: var(--color-black);
   font-family: var(--font-inter);
   font-weight: 600;
 }
 
+.map {
+  display: flex;
+}
+
 .map img {
   max-width: 100%;
+}
+
+.infoBlock {
+  text-align: start;
+  padding: var(--padding-6xs);
+}
+
+.infoBlock div {
+  display: flex;
+  align-items: center;
+}
+
+.infoBlock div img {
+  margin: 0.5rem;
 }
