@@ -1,10 +1,8 @@
 .icon {
-  width: 41px;
-  height: 41px;
+  width: 2rem;
+  height: 2rem;
 }
-.label {
-  line-height: 28px;
-}
+
 .SaibaMais {
   display: flex;
   flex-direction: row;

@@ -9,6 +9,7 @@ import Section from "../components/Section";
 import ServicesSection from "../components/ServicesSection";
 import HeaderSection from "../components/HeaderSection";
 import styles from "./Desktop.module.css";
+import SmallFooter from "../components/SmallFooter";
 
 const Desktop = () => {
 
@@ -24,11 +25,8 @@ const Desktop = () => {
       <Contato />
       <FormSection />
       <Footer />
-      <img
-        className={styles.whatsappIcon}
-        alt=""
-        src="/whatsapp@2x.png"
-      />
+      <SmallFooter />
+
     </div>
   );
 };

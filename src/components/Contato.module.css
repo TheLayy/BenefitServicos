@@ -88,3 +88,8 @@ div {
 .infoBlock div img {
   margin: 0.5rem;
 }
+
+.infoBlock a {
+  color: var(--escuro);
+  text-decoration: none;
+}

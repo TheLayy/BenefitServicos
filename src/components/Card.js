@@ -3,28 +3,27 @@ import SaibaMais from "./SaibaMais";
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
 
-const Card = ({ className = "", showLabel, label1, label2, img, color }) => {
-  const cardStyle = useMemo(() => {
-    return {
-      color: color === "purple" ? "purple" : "orange",
-    };
-  }, [color]);
+const Card = ({ className = "", label1, label2, img, color }) => {
 
-  const iconSrc = color === "purple" ? "/icon1.svg" : "/icon2.svg";
+  const cardColors = color === "dark" ? styles.darkColors : styles.lightColors;
+
+  const iconSrc = color === "dark" ? "/orange-arrow-icon.svg" : "/blue-orange-arrow-icon.svg";
 
   return (
-    <div className={[styles.card, className].join(" ")}>
-      <div className={styles.headingAndLink} style={cardStyle}>
+    <div className={[styles.card, className, cardColors].join(" ")}>
+      <div className={styles.headingAndLink}>
         <div className={styles.labelBox}>
           <div className={styles.label1}>{label1}</div>
           <div className={styles.label2}>{label2}</div>
         </div>
         <SaibaMais
+          className={styles.SaibaMais}
           icon={iconSrc}
           label="Saiba Mais"
         />
       </div>
       <img
+        className={styles.cardImg}
         alt=""
         src={img}
       />
@@ -34,13 +33,12 @@ const Card = ({ className = "", showLabel, label1, label2, img, color }) => {
 
 Card.propTypes = {
   className: PropTypes.string,
-  showLabel: PropTypes.bool,
 
   /** Style props */
   label1: PropTypes.string.isRequired,
   label2: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  color: PropTypes.oneOf(["purple", "orange"]).isRequired,
+  color: PropTypes.oneOf(["dark", "light"]).isRequired,
 };
 
 export default Card;

@@ -7,6 +7,7 @@
   flex-direction: column;
   align-items: center;
 }
+
 .servicesSection {
   border: 2px solid green !important;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
@@ -17,6 +18,7 @@
   color: var(--color-midnightblue-100);
   font-family: var(--font-inter);
 }
+
 .sectionSepIcon {
   border: 2px solid orange !important;
   width: 6.013rem;
@@ -24,29 +26,17 @@
   object-fit: contain;
   align-self: flex-start;
 }
-.card {
-  border: 2px solid gray !important;
-  box-shadow: 0 5px 0#191a23;
-  border-radius: var(--br-26xl);
-  background-color: var(--color-midnightblue-100);
-  border: 1px solid var(--escuro);
-  box-sizing: border-box;
-  width: 26.438rem;
-  height: 18.438rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: var(--padding-31xl);
-}
+
 .cards {
   border: 2px solid rgb(0, 247, 255) !important;
   width: 55rem;
   height: 38.5rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: space-around;
 }
+
 .sectionSubtitle {
   border: 2px solid yellow !important;
   letter-spacing: 0.01em;

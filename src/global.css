@@ -59,6 +59,12 @@ body {
   --font-size-lgi-8: 1.238rem;
 
   /* Colors */
+  --dark-card-bg: #2a0f5b;
+  --dark-card-stroke: #290c5d;
+  --dark-card-text-bg: #f59124;
+  --light-card-bg: #f59124;
+  --light-card-stroke: #d37e21;
+  --light-card-text-bg: #2a0f5b;
   --colors-white: #fff;
   --color-midnightblue-100: #2a0f5b;
   --color-midnightblue-200: #290c5f;
@@ -78,7 +84,7 @@ body {
 
   /* Gaps */
   --gap-74xl: 5.812rem;
-  --gap-mini: 0.937rem;
+  --gap-mini: 0.6rem;
   --gap-11xs: 0.125rem;
 
   /* Paddings */
@@ -86,6 +92,7 @@ body {
   --padding-13xl: 2rem;
   --padding-31xl: 3.125rem;
   --padding-6xs: 0.437rem;
+  --padding-xs: 0.3rem;
 
   /* Border radiuses */
   --br: 25px;

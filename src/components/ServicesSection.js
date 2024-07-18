@@ -1,6 +1,4 @@
 import Card from "./Card";
-import Property1Green from "./Property1Green";
-import Property1White from "./SaibaMais";
 import Tittle from "./Tittle";
 import PropTypes from "prop-types";
 import styles from "./ServicesSection.module.css";
@@ -26,15 +24,23 @@ const ServicesSection = ({ className = "" }) => {
             label1="Seguros de"
             label2="Veículo"
             showLabel={false}
-            color="purple"
+            color="dark"
             img="/car-icon.png"
+          />
+          <Card
+            className="card"
+            label1="Planos de"
+            label2="Saúde"
+            showLabel={false}
+            color="light"
+            img="/house-icon.png"
           />
           <Card
             className="card"
             label1="Seguro"
             label2="Residência"
             showLabel={false}
-            color="purple"
+            color="dark"
             img="/house-icon.png"
           />
         </div>
