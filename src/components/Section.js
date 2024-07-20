@@ -1,7 +1,7 @@
 import Tittle from "./Tittle";
 import PropTypes from "prop-types";
 import styles from "./Section.module.css";
-import CallBtn from "./CallBtn";
+
 
 const Section = ({ className = "" }) => {
   return (
@@ -17,7 +17,9 @@ const Section = ({ className = "" }) => {
           cada etapa. Fornecemos assistência personalizada para garantir que você
           obtenha a melhor cobertura pelo melhor preço.
         </div>
-        <CallBtn label="Faça sua cotação" />
+        <div className={styles.callBtn} onClick={() => handleScroll("form")}>
+          Faça sua cotação
+        </div>
         <img className={styles.sectionSepIconEnd} src="/section-sep-icon-end.svg" alt="" />
       </div>
     </div>

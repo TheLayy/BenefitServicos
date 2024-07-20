@@ -1,5 +1,4 @@
 .container {
-  border: 2px solid blue !important;
   margin: auto;
   min-width: 85vw;
   max-width: 944px;
@@ -9,7 +8,7 @@
 }
 
 .servicesSection {
-  border: 2px solid green !important;
+  padding: 5rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
   background-color: var(--claro);
   width: 100%;
@@ -20,7 +19,6 @@
 }
 
 .sectionSepIcon {
-  border: 2px solid orange !important;
   width: 6.013rem;
   height: 3.631rem;
   object-fit: contain;
@@ -28,17 +26,14 @@
 }
 
 .cards {
-  border: 2px solid rgb(0, 247, 255) !important;
-  width: 55rem;
-  height: 38.5rem;
   display: flex;
-  justify-content: space-between;
+  padding: 2rem;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   align-content: space-around;
 }
 
 .sectionSubtitle {
-  border: 2px solid yellow !important;
   letter-spacing: 0.01em;
   font-weight: 500;
   display: flex;

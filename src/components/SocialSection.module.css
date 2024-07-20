@@ -1,5 +1,4 @@
 .socialSection {
-  border: 2px solid red !important;
   background-color: var(--color-sandybrown);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
   width: 100%;
@@ -12,7 +11,6 @@
 }
 
 .socialIcons {
-  border: 1px solid green;
   width: 60%;
   display: flex;
   justify-content: space-around;

@@ -1,5 +1,4 @@
 .formSection {
-  border: 2px solid orange !important;
   background: url("/public/form-section-bg.png") left,
     linear-gradient(
       to right,

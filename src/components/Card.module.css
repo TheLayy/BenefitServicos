@@ -1,4 +1,5 @@
 .card {
+  margin: 1rem;
   box-shadow: 0 5px 0#191a23;
   border-radius: var(--br-26xl);
   box-sizing: border-box;
@@ -12,13 +13,23 @@
   padding: var(--padding-31xl);
 }
 
+.label2,
+.label3 {
+  font-size: larger;
+}
+
+.displayNone {
+  display: none;
+}
+
 .labelBox .label1,
-.labelBox .label2 {
+.labelBox .label2,
+.labelBox .label3 {
   font-family: var(--h2);
   font-weight: 400;
   width: fit-content;
-  padding: 0.1rem 0.2rem;
-  margin-bottom: 0.1rem;
+  padding: 0.2rem 0.2rem;
+  margin-bottom: 0.2rem;
   border-radius: 0.4rem;
 }
 
@@ -32,7 +43,8 @@
 }
 
 .darkColors .labelBox .label1,
-.darkColors .labelBox .label2 {
+.darkColors .labelBox .label2,
+.darkColors .labelBox .label3 {
   font-weight: 500;
   color: var(--dark-card-bg);
   background-color: var(--dark-card-text-bg);
@@ -48,7 +60,8 @@
 }
 
 .lightColors .labelBox .label1,
-.lightColors .labelBox .label2 {
+.lightColors .labelBox .label2,
+.lightColors .labelBox .label3 {
   color: var(--claro);
   background-color: var(--light-card-text-bg);
 }
@@ -58,9 +71,40 @@
 }
 
 .headingAndLink {
+  cursor: pointer;
   height: 13rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+}
+
+.flippedCard {
+  background-color: var(--claro) !important;
+  border: 1px solid var(--dark-card-stroke);
+}
+
+.flippedCard .cardImg {
+  display: none;
+}
+
+.bottomDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.backCardImg {
+  width: 25%;
+  background-color: var(--light-card-bg) !important;
+  border: 2px solid var(--light-card-stroke);
+  border-radius: 40%;
+  padding: 2% 5%;
+  align-self: flex-end;
+}
+
+.backText {
+  font-size: small;
+  line-height: 1.3rem;
+  text-align: justify;
 }

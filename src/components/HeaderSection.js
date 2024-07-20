@@ -2,21 +2,22 @@ import PropTypes from "prop-types";
 import styles from "./HeaderSection.module.css";
 
 const HeaderSection = ({ className = "" }) => {
+
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const offset = 70;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div className={[styles.header, className].join(" ")}>
       <div className={styles.container}>
-        <div className={styles.navBar}>
-          <div className={styles.navItens}>
-            <img className={styles.logoIcon} alt="" src="/logo.png" />
-            <div className={styles.sobreNs}>Sobre nós</div>
-            <div className={styles.produtos}>Produtos</div>
-            <div className={styles.contato}>Contato</div>
-            <div className={styles.callBtn}>
-              Faça sua cotação
-            </div>
-          </div>
-        </div>
-
         <div>
           <div className={styles.heroText}>
             <div className={styles.subTitle}>
@@ -27,7 +28,7 @@ const HeaderSection = ({ className = "" }) => {
               <span className={styles.soluesPara}>{`Soluções para `}</span>sua
               segurança
             </b>
-            <div className={styles.callBtn}>
+            <div className={styles.callBtn} onClick={() => handleScroll("form")}>
               Faça sua cotação
             </div>
           </div>

@@ -13,7 +13,6 @@ body {
 }
 
 .container {
-  border: 2px solid blue !important;
   margin: auto;
   min-width: 85vw;
   max-width: 944px;
@@ -65,6 +64,7 @@ body {
   --light-card-bg: #f59124;
   --light-card-stroke: #d37e21;
   --light-card-text-bg: #2a0f5b;
+  --btn-hover: #da8221;
   --colors-white: #fff;
   --color-midnightblue-100: #2a0f5b;
   --color-midnightblue-200: #290c5f;

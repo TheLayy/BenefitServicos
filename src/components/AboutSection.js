@@ -4,7 +4,7 @@ import styles from "./AboutSection.module.css";
 
 const AboutSection = ({ className = "" }) => {
   return (
-    <div className={[styles.aboutSection, className].join(" ")}>
+    <div id="sobre-nos" className={[styles.aboutSection, className].join(" ")}>
       <div className={[styles.container, "container"].join(" ")}>
         <div className={styles.logo}>
           <img className={styles.logoIcon} alt="" src="/logo.png" />

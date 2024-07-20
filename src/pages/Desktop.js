@@ -10,11 +10,13 @@ import ServicesSection from "../components/ServicesSection";
 import HeaderSection from "../components/HeaderSection";
 import styles from "./Desktop.module.css";
 import SmallFooter from "../components/SmallFooter";
+import NavBar from "../components/NavBar";
 
 const Desktop = () => {
 
   return (
     <div className={styles.desktop}>
+      <NavBar />
       <HeaderSection />
       <ServicesSection />
       <Section />

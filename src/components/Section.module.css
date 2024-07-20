@@ -1,5 +1,4 @@
 .section2 {
-  border: 1px solid orange;
   background-image: url("/public/section2-bg.svg");
   background-size: cover;
   background-position: center;
@@ -11,16 +10,20 @@
   font-family: var(--font-inter);
   display: flex;
 }
+
 .container {
   min-height: 60vh;
   justify-content: space-between;
 }
+
 .sectionSepIconBegin {
   align-self: flex-start;
 }
+
 .sectionSepIconEnd {
   align-self: flex-end;
 }
+
 .sectionSubtitle {
   font-size: var(--font-size-2xl);
   letter-spacing: 0.01em;
@@ -33,4 +36,25 @@
   width: 52.875rem;
   height: 7.375rem;
   margin: 2rem;
+}
+
+.callBtn {
+  box-shadow: 2px 2px 0 var(--escuro);
+  font-weight: 800;
+  border-radius: var(--br-3xs);
+  background-color: var(--color);
+  width: 17.938rem;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: var(--font-size-7xl);
+  cursor: pointer;
+}
+
+.callBtn:hover {
+  box-shadow: none;
+  background-color: var(--btn-hover);
 }

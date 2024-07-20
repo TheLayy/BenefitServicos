@@ -1,9 +1,12 @@
 .container {
-  border: 2px solid blue !important;
   margin: auto;
   min-width: 85vw;
   max-width: 944px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
+
 .header {
   width: 100%;
   height: 95vh;
@@ -12,36 +15,38 @@
   color: var(--escuro);
   font-family: var(--font-calibri);
   background-image: url("/public/header-bg.png");
-  background-size: cover;
-  background-position: center;
+  background-size: 105%;
+  background-position: bottom;
 }
-.headerBgIcon {
-  width: 87.5rem;
-  height: 48rem;
-  object-fit: cover;
-}
+
 .soluesPara {
   letter-spacing: 0.01em;
 }
+
 .title {
   display: inline-block;
   width: 19.188rem;
   height: 8.563rem;
 }
+
 .subTitleChild {
   background-color: var(--color);
   width: 95%;
   height: 0.438rem;
 }
+
 .brokerSeguros,
 .subTitle {
   width: 11.813rem;
 }
+
 .brokerSeguros {
+  font-family: var(--font-calibri);
   text-transform: uppercase;
   display: inline-block;
   height: 1.813rem;
 }
+
 .subTitle {
   height: 2.438rem;
   font-size: var(--font-size-6xl);
@@ -50,7 +55,9 @@
   flex-direction: column;
   align-items: center;
 }
+
 .callBtn {
+  box-shadow: 2px 2px 0 var(--escuro);
   font-weight: 800;
   border-radius: var(--br-3xs);
   background-color: var(--color);
@@ -62,61 +69,20 @@
   justify-content: center;
   box-sizing: border-box;
   font-size: var(--font-size-7xl);
+  cursor: pointer;
 }
-.navItens .callBtn {
-  width: 12rem;
-  height: 3rem;
-  font-size: var(--font-size-6x1);
+
+.callBtn:hover {
+  box-shadow: none;
+  background-color: var(--btn-hover);
 }
+
 .heroText {
   width: 19.188rem;
   height: 18.313rem;
-  border: 1px solid green;
   margin: 15vh 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
-}
-.contato,
-.produtos,
-.sobreNs {
-  font-weight: 800;
-  display: inline-block;
-  height: 1.219rem;
-}
-.sobreNs {
-  width: 5.75rem;
-}
-.contato,
-.produtos {
-  width: 6.013rem;
-}
-.contato {
-  width: 5.156rem;
-}
-.navItens {
-  width: 100%;
-  height: 3.063rem;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-around;
-  align-items: center;
-}
-.logoIcon {
-  width: 10.313rem;
-  height: 3.938rem;
-  object-fit: cover;
-}
-.navBar {
-  margin: auto;
-  font-size: var(--text-paragraph-size);
-  font-family: var(--font-inter);
-  backdrop-filter: blur(40px);
-  border-radius: 0 0 var(--br-3xs) var(--br-3xs);
-  background-color: var(--color-gray-100);
-  height: 5.25rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }

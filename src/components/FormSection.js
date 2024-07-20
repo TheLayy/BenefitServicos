@@ -5,7 +5,7 @@ import styles from "./FormSection.module.css";
 
 const FormSection = ({ className = "" }) => {
   return (
-    <div className={[styles.formSection, className].join(" ")}>
+    <div id="form" className={[styles.formSection, className].join(" ")}>
       <div className={[styles.formContainer, "container"].join(" ")}>
         <div className={styles.textBox}>
           <div className={styles.title}>
