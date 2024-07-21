@@ -1,6 +1,11 @@
 import Tittle from "./Tittle";
 import PropTypes from "prop-types";
 import styles from "./Contato.module.css";
+import {
+  MapContainer,
+  TileLayer,
+} from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
 const Contato = ({ className = "" }) => {
   return (
@@ -31,12 +36,14 @@ const Contato = ({ className = "" }) => {
                 <div>Venha nos visitar</div>
                 <div>
                   <img src="/map-icon.svg" alt="" />
-                  <a href="https://maps.app.goo.gl/QUQvnzxZYrnvymne6">Av Conceição, 460, Centro, Diadema-SP CEP 099200-000</a>
+                  <a href="https://maps.app.goo.gl/QUQvnzxZYrnvymne6" target="_blank">Av Conceição, 460, Centro, Diadema-SP CEP 099200-000</a>
                 </div>
               </div>
             </div>
           </div>
-          <div className={styles.map}></div>
+          <div className={styles.map}>
+            <a href="https://maps.app.goo.gl/QUQvnzxZYrnvymne6" target="_blank"><img src="/map.png" alt="" /></a>
+          </div>
         </div>
       </div>
     </div>

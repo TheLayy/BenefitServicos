@@ -2,6 +2,7 @@
   background-color: var(--color-midnightblue-100);
   width: 100%;
   padding: var(--padding-6xs);
+  height: 6vh;
 }
 
 .smallFooter,

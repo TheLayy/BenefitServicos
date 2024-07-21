@@ -11,6 +11,25 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--padding-31xl);
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+}
+
+.cardFront {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flippedCard {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.cardBack {
+  transform: rotateY(180deg);
 }
 
 .label2,
@@ -70,8 +89,10 @@
   width: 40%;
 }
 
-.headingAndLink {
+.cardFront .headingAndLink {
   cursor: pointer;
+}
+.headingAndLink {
   height: 13rem;
   display: flex;
   flex-direction: column;
@@ -84,23 +105,34 @@
   border: 1px solid var(--dark-card-stroke);
 }
 
-.flippedCard .cardImg {
-  display: none;
-}
-
 .bottomDiv {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 100%;
+}
+
+.CoteAgora {
+  display: flex;
+  cursor: pointer;
+}
+
+.lightColors .backCardImg {
+  background-color: var(--light-card-bg) !important;
+  border: 2px solid var(--light-card-stroke);
+}
+
+.darkColors .backCardImg {
+  background-color: var(--dark-card-bg) !important;
+  border: 2px solid var(--dark-card-stroke);
 }
 
 .backCardImg {
   width: 25%;
-  background-color: var(--light-card-bg) !important;
-  border: 2px solid var(--light-card-stroke);
   border-radius: 40%;
   padding: 2% 5%;
   align-self: flex-end;
+  cursor: pointer;
 }
 
 .backText {

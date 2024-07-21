@@ -4,6 +4,18 @@ import styles from "./Section.module.css";
 
 
 const Section = ({ className = "" }) => {
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    const offset = 0;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.scrollY - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  };
+
   return (
     <div className={[styles.section2, className].join(" ")}>
       <div className={[styles.container, "container"].join(" ")}>

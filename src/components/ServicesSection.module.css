@@ -42,3 +42,19 @@
   width: 57.831rem;
   height: 4.569rem;
 }
+
+.link {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin: 1.4rem;
+}
+
+.link:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.link div {
+  margin: 0.6rem;
+}

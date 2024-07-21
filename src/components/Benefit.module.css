@@ -3,6 +3,10 @@
   max-width: 13rem;
 }
 
+.Benefit:hover {
+  transform: scale(1.1);
+}
+
 .Benefit div {
   margin: 0.6rem;
 }
