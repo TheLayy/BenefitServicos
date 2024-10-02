@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Desktop from "./pages/Desktop";
+import AdminPage from "./pages/AdminPage";
 
 function App() {
   const action = useNavigationType();
@@ -27,6 +28,10 @@ function App() {
         title = "";
         metaDescription = "";
         break;
+      case "/admin":
+        title = "Admin - Lista de Clientes";
+        metaDescription = "Página administrativa para visualizar e gerenciar clientes.";
+        break;
     }
 
     if (title) {
@@ -46,6 +51,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Desktop />} />
+      <Route path="/admin" element={<AdminPage />} />
     </Routes>
   );
 }
