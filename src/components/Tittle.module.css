@@ -1,11 +1,13 @@
 .text {
   font-weight: 900;
 }
+
 .border {
   height: 12.9%;
   width: 98%;
   background-color: var(--color);
 }
+
 .tittle {
   max-width: 100%;
   height: 62px;
@@ -16,4 +18,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .tittle {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .text {
+    padding-bottom: 0.5rem;
+  }
+
+  .border {
+    height: 10%;
+    width: 80%;
+  }
 }

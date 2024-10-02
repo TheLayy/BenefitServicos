@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 
 .claro {
@@ -104,4 +105,10 @@ body {
   --br-81xl: 100px;
   --br-9xs: 4px;
   --br-7xs: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    font-size: 65%;
+  }
 }

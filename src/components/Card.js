@@ -53,14 +53,14 @@ const Card = ({ className = "", insurance, label1, label2, label3, img, color, b
               {backText}
             </div>
             <div className={styles.bottomDiv}>
-              <div className={styles.CoteAgora} onClick={() => handleScroll("form")}>
+              <div className={styles.CoteAgora} onClick={() => handleScroll("form", insurance)}>
                 <SaibaMais
                   className={styles.SaibaMais}
                   icon={iconSrc}
                   label="Cote Agora"
                 />
               </div>
-              <img className={styles.backCardImg} alt="" src={img} onClick={() => handleScroll("form", insurance)} />
+              <img className={styles.backCardImg} alt="" src={img} onClick={handleClick} />
             </div>
           </div>
         </div>)}

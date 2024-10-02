@@ -17,6 +17,7 @@
   background-image: url("/public/header-bg.png");
   background-size: 105%;
   background-position: bottom;
+  background-repeat: no-repeat;
 }
 
 .soluesPara {
@@ -85,4 +86,16 @@
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    height: fit-content;
+    background-size: 200%;
+    background-position: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
 }

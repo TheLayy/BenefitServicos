@@ -1,5 +1,6 @@
 .benefitsSection {
-  padding: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
   background-color: var(--claro);
   width: 100%;
@@ -18,4 +19,12 @@
   width: 100%;
   justify-content: space-evenly;
   margin: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .container,
+  .content {
+    width: 80%;
+  }
 }

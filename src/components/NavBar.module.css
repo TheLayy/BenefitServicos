@@ -100,3 +100,9 @@
 .contato {
   width: 5.156rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .Navbar {
+    flex-direction: column;
+  }
+}
