@@ -19,7 +19,7 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     return (
-        <AuthContext.Provider value={{ currentUser, loading }}> {/* Pass loading */}
+        <AuthContext.Provider value={{ currentUser, loading }}>
             {children}
         </AuthContext.Provider>
     );

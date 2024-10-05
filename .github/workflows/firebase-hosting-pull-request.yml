@@ -17,5 +17,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BENEFIT_76F8A }}
-          projectId: benefit-76f8a
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_BENEFIT_BROKER }}
+          projectId: benefit-broker
