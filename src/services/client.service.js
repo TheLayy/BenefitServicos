@@ -1,23 +1,22 @@
-// client.service.js
 import { ref, push, update, remove, onValue, set } from "firebase/database";
 import database from "../firebase";
 
 const dbRef = ref(database, "/client");
 
 class ClientDataService {
-    getAll(callback) {
+    getAll(callback, errorCallback) {
         onValue(dbRef, (snapshot) => {
             const clients = [];
             snapshot.forEach((childSnapshot) => {
                 const client = {
-                    key: childSnapshot.key, // Obtém a chave do cliente
-                    ...childSnapshot.val(), // Obtém os dados do cliente
+                    key: childSnapshot.key,
+                    ...childSnapshot.val(),
                 };
                 clients.push(client);
             });
             callback(clients);
         }, (error) => {
-            console.error("Error fetching clients:", error);
+            errorCallback(error);
         });
     }
 
