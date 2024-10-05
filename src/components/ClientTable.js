@@ -209,6 +209,7 @@ const ClientTable = () => {
                             confirmButtonText: 'OK'
                         });
                         fetchClients();
+                        setSelected([]);
                     })
                     .catch((e) => {
                         Swal.fire({
@@ -255,7 +256,12 @@ const ClientTable = () => {
             if (result.isConfirmed) {
                 selected.forEach((id) => {
                     ClientDataService.delete(id).catch((e) => {
-                        console.error("Erro ao deletar o cliente:", e);
+                        Swal.fire({
+                            title: 'Erro!',
+                            text: 'Ocorreu um erro ao deletar o cliente:' + id,
+                            icon: 'error',
+                            confirmButtonText: 'OK'
+                        });
                     });
                 });
                 Swal.fire('Deletado!', 'Os registros selecionados foram deletados.', 'success');
