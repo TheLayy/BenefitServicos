@@ -34,3 +34,4 @@ pids
 Thumbs.db
   
 .firebase/
+.env
