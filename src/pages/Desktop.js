@@ -12,15 +12,15 @@ import styles from "./Desktop.module.css";
 import SmallFooter from "../components/SmallFooter";
 import NavBar from "../components/NavBar";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
-import { Button, Fab, Fade, Box } from "@mui/material"; // Importar Fab e Fade
+import { Fab, Fade, Box } from "@mui/material";
 import { useEffect, useState } from "react";
 
 function ScrollTop(props) {
   const { children } = props;
-  const [trigger, setTrigger] = useState(false); // Estado para controle do trigger
+  const [trigger, setTrigger] = useState(false);
 
   const handleScroll = () => {
-    setTrigger(window.scrollY > 300); // Define o trigger quando o scroll é maior que 300
+    setTrigger(window.scrollY > 300);
   };
 
   useEffect(() => {
@@ -31,15 +31,10 @@ function ScrollTop(props) {
   }, []);
 
   const handleClick = (event) => {
-    const anchor = (event.target.ownerDocument || document).querySelector(
-      "#back-to-top-anchor"
-    );
-
-    if (anchor) {
-      anchor.scrollIntoView({
-        block: "center",
-      });
-    }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
@@ -76,7 +71,11 @@ const Desktop = () => {
       <SmallFooter />
 
       <ScrollTop>
-        <Fab size="small" aria-label="scroll back to top" sx={{ width: 46, height: 46 }}>
+        <Fab
+          size="large"
+          aria-label="scroll back to top"
+          sx={{ width: 46, height: 46 }}
+        >
           <ArrowUpwardIcon sx={{ fontSize: 30 }} />
         </Fab>
       </ScrollTop>
