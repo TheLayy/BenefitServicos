@@ -7,6 +7,8 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import Swal from 'sweetalert2';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import * as XLSX from 'xlsx';
 
 const headCells = [
     { id: 'timestamp', numeric: false, disablePadding: true, label: 'Criado em' },
@@ -73,7 +75,7 @@ EnhancedTableHead.propTypes = {
 };
 
 function EnhancedTableToolbar(props) {
-    const { numSelected, onDeleteSelected, onFilterClick } = props;
+    const { numSelected, onDeleteSelected, onFilterClick, onExportClick } = props;
 
     return (
         <Toolbar
@@ -114,13 +116,21 @@ function EnhancedTableToolbar(props) {
                     </IconButton>
                 </Tooltip>
             ) : (
-                <Tooltip title="Filtrar lista">
-                    <IconButton onClick={onFilterClick}>
-                        <FilterListIcon />
-                    </IconButton>
-                </Tooltip>
-            )}
-        </Toolbar>
+                <>
+                    <Tooltip title="Exportar para Excel">
+                        <IconButton onClick={onExportClick}>
+                            <FileDownloadOutlinedIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Filtrar lista">
+                        <IconButton onClick={onFilterClick}>
+                            <FilterListIcon />
+                        </IconButton>
+                    </Tooltip>
+                </>
+            )
+            }
+        </Toolbar >
     );
 }
 
@@ -128,6 +138,7 @@ EnhancedTableToolbar.propTypes = {
     numSelected: PropTypes.number.isRequired,
     onDeleteSelected: PropTypes.func.isRequired,
     onFilterClick: PropTypes.func.isRequired,
+    onExportClick: PropTypes.func.isRequired,
 };
 
 const ClientTable = () => {
@@ -187,6 +198,18 @@ const ClientTable = () => {
         });
     };
 
+    const handleExportClick = () => {
+        const ws = XLSX.utils.json_to_sheet(clients.map(client => ({
+            'Criado em': `${new Date(client.timestamp).toLocaleDateString('pt-BR')} ${new Date(client.timestamp).toLocaleTimeString('pt-BR')}`,
+            'Nome': client.name,
+            'Email': client.email,
+            'Telefone': client.phone,
+            'Seguros Selecionados': client.insurances.join(', ')
+        })));
+        const wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, "dados");
+        XLSX.writeFile(wb, "dados_benefit.xlsx");
+    };
 
     const handleDelete = (id) => {
         Swal.fire({
@@ -351,8 +374,9 @@ const ClientTable = () => {
             <Paper sx={{ width: '100%', mb: 2 }}>
                 <EnhancedTableToolbar
                     numSelected={selected.length}
-                    onDeleteSelected={handleDeleteSelected} // Passa a função de deletar selecionados
-                    onFilterClick={handleFilterClick} // Passa a função de filtrar
+                    onDeleteSelected={handleDeleteSelected}
+                    onFilterClick={handleFilterClick}
+                    onExportClick={handleExportClick}
                 />
                 {loading ? (
                     <Box display="flex" justifyContent="center" alignItems="center" height="60vh">
