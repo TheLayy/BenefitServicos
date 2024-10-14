@@ -14,6 +14,7 @@ const AboutSection = ({ className = "" }) => {
             <Tittle
               text="Sobre nós"
               mode="claro"
+              className={styles.Tittle}
             />
             <p>
               Somos a Benefit: Nosso objetivo é auxiliar sua empresa na

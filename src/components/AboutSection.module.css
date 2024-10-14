@@ -30,3 +30,36 @@
 .logoIcon {
   object-fit: cover;
 }
+
+@media only screen and (max-width: 600px) {
+  .aboutSection {
+    background: linear-gradient(
+      to bottom,
+      var(--claro) 50%,
+      var(--color-midnightblue-200) 50%
+    );
+    font-size: var(--font-size-4xl);
+  }
+
+  .container {
+    flex-direction: column !important;
+    height: 100vh;
+  }
+
+  .aboutText,
+  .logo {
+    width: 100%;
+  }
+
+  .aboutText .Tittle {
+    margin: auto;
+  }
+
+  .logo {
+    margin: auto;
+  }
+
+  .logo img {
+    width: 100%;
+  }
+}
