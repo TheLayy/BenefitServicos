@@ -24,8 +24,8 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "Home - Bem-vindo!";
-        metaDescription = "Página inicial do aplicativo.";
+        title = "Benefit Broker";
+        metaDescription = "Benefit Broker Seguros: Encontre as melhores cotações de seguros.";
         break;
       case "/admin":
         title = "Admin - Lista de Clientes";
