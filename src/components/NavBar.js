@@ -25,9 +25,9 @@ const NavBar = ({ }) => {
 
   return (
     <div className={styles.NavBar}>
-      <MenuRoundedIcon onClick={() => setIsOpen(!isOpen)} className={`${isOpen ? styles.displayNone : styles.displayBlock}`} fontSize='large' color='primary' />
+      <div className={`${styles.displayNone} ${isOpen ? styles.displayNone : styles.displayBlock}`} ><MenuRoundedIcon onClick={() => setIsOpen(!isOpen)} fontSize='large' color='primary' /></div>
 
-      <CloseRoundedIcon onClick={() => setIsOpen(!isOpen)} className={`${isOpen ? styles.displayBlock : styles.displayNone}`} fontSize='large' color='primary' />
+      <div className={`${styles.displayNone} ${isOpen ? styles.displayBlock : styles.displayNone}`}><CloseRoundedIcon onClick={() => setIsOpen(!isOpen)} fontSize='large' color='primary' /></div>
 
       <div className={`${styles.navItens} ${isOpen ? styles.openSmMenu : styles.closedSmMenu}`}>
         <img className={styles.logoIcon} alt="" src="/logo.png" onClick={scrollToTop} />

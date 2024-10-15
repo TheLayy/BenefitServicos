@@ -101,16 +101,16 @@
   width: 5.156rem;
 }
 
-.displayBlock {
-  display: block;
-  align-self: flex-start;
-}
-
 .displayNone {
   display: none;
 }
 
 @media only screen and (max-width: 600px) {
+  .displayBlock {
+    display: block;
+    align-self: flex-start;
+  }
+
   .closedSmMenu {
     display: none;
   }
