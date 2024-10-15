@@ -10,7 +10,7 @@ const SmallFooter = ({
       <div className={[styles.container, className].join("container")}>
         <div className={styles.text}>
           ® Benefit Serviços LTDA-ME | Todos os direitos reservados | Designed
-          by <a href="">WWLab</a>
+          by <a href="https://github.com/leticiamn" target="blank">Letícia Medeiros</a>
         </div>
       </div>
     </div>
