@@ -1,5 +1,4 @@
 .contato {
-  border: 1px solid rgb(0, 0, 255);
   background-color: var(--color);
   width: 100%;
   text-align: center;
@@ -7,7 +6,7 @@
 }
 
 .container {
-  min-height: 60vh;
+  min-height: 100vh;
   justify-content: space-between;
 }
 
@@ -101,4 +100,33 @@
 
 .infoBlock a:hover {
   color: var(--color);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    max-width: 90% !important;
+  }
+
+  .tittle {
+    margin: var(--gap-mini) auto;
+    font-size: var(--font-size-5xl);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .container {
+    justify-content: center;
+  }
+
+  .map,
+  .contacts {
+    min-width: 100%;
+    margin: 5px auto;
+  }
 }
