@@ -81,3 +81,31 @@
   font-family: var(--font-inter) !important;
   margin: auto;
 }
+
+@media only screen and (max-width: 600px) {
+  .formContainer,
+  .formSection .container {
+    flex-direction: column !important;
+    max-width: 100% !important;
+    min-width: 90% !important;
+  }
+
+  .formSection {
+    padding: 2rem;
+  }
+
+  .textBox,
+  .formBox {
+    width: 100%;
+  }
+
+  .title {
+    font-size: var(--font-size-17xl);
+  }
+
+  .text {
+    font-size: var(--text-label-size);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+  }
+}
