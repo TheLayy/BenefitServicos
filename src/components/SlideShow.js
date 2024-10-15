@@ -1,7 +1,6 @@
 import React from 'react';
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import styles from "./SlideShow.module.css"
 
 // Importação do CSS do Swiper
 import 'swiper/css';
