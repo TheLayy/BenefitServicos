@@ -38,6 +38,7 @@
       var(--claro) 50%,
       var(--color-midnightblue-200) 50%
     );
+    box-shadow: none;
     font-size: var(--font-size-4xl);
   }
 

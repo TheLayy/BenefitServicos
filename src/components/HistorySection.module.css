@@ -31,3 +31,22 @@
   max-width: 100%;
   object-fit: cover;
 }
+
+@media only screen and (max-width: 600px) {
+  .historySection {
+    background: var(--color-midnightblue-200);
+    font-size: var(--font-size-4xl);
+  }
+
+  .historyText {
+    width: 100%;
+  }
+
+  .historyText .Tittle {
+    margin: auto;
+  }
+
+  .img {
+    display: none;
+  }
+}

@@ -11,6 +11,7 @@ const HistorySection = ({ className = "" }) => {
             <Tittle
               text="Como surgiu?"
               mode="claro"
+              className={styles.Tittle}
             />
             <p>
               Em 2010 surgiu a ideia de se desenvolver um sistema de atendimento
