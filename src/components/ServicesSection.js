@@ -2,6 +2,7 @@ import Card from "./Card";
 import Tittle from "./Tittle";
 import PropTypes from "prop-types";
 import styles from "./ServicesSection.module.css";
+import SlideShow from "./SlideShow";
 
 const ServicesSection = ({ className = "" }) => {
   return (
@@ -87,6 +88,7 @@ const ServicesSection = ({ className = "" }) => {
             backText="O seguro de risco rural é voltado para o setor agrícola, oferecendo cobertura para plantações, criações de animais e equipamentos agrícolas. Protege contra eventos adversos como secas, granizos, pragas e doenças, ajudando a manter a sustentabilidade do negócio rural."
           />
         </div>
+        <SlideShow />
         <div className={styles.link} onClick={() => window.open("https://www.benefitservicos.com.br/index3.php", "_blank")}>
           <img className={styles.icon} alt="" src="/blue-arrow-icon.svg" />
           <div className={styles.label}>Conheça nossos outros serviços</div>
