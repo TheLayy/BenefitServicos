@@ -99,20 +99,15 @@
     flex-direction: column;
   }
 
-  .brokerSeguros,
-  .subTitle {
-    max-width: 80%;
-  }
-
   .brokerSeguros {
     height: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .title {
-    width: 95%;
+    width: 100%;
     height: 10rem;
-    font-size: 3rem;
+    font-size: 2rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
