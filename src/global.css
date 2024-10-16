@@ -113,6 +113,6 @@ html {
 
 @media only screen and (max-width: 768px) {
   :root {
-    font-size: 65%;
+    font-size: 10px;
   }
 }
