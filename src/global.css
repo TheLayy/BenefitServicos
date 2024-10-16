@@ -12,6 +12,10 @@ body {
   line-height: normal;
 }
 
+html {
+  font-size: 16px;
+}
+
 .container {
   margin: auto;
   min-width: 85vw;
