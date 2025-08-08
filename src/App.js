@@ -1,11 +1,8 @@
 // App.js
 import { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import { AuthContext } from './services/AuthContext'; // Importar AuthContext
+import {Routes, Route, useNavigationType, useLocation } from "react-router-dom";
 import Desktop from "./pages/Desktop";
-import AdminPage from "./pages/AdminPage";
-import Auth from "./pages/Auth";
-import ProtectedRoute from './services/ProtectedRoute';
+
 
 function App() {
   const action = useNavigationType();
@@ -27,14 +24,6 @@ function App() {
         title = "Benefit Broker";
         metaDescription = "Benefit Broker Seguros: Encontre as melhores cotações de seguros.";
         break;
-      case "/admin":
-        title = "Admin - Lista de Clientes";
-        metaDescription = "Página administrativa para visualizar e gerenciar clientes.";
-        break;
-      case "/auth":
-        title = "Autenticação";
-        metaDescription = "Autenticação necessária para acessar a área administrativa.";
-        break;
     }
 
     if (title) {
@@ -54,10 +43,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Desktop />} />
-      <Route path="/auth" element={<Auth />} />
-      <Route element={<ProtectedRoute />}>
-        <Route path="/admin" element={<AdminPage />} />
-      </Route>
     </Routes>
   );
 }

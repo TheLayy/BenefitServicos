@@ -1,5 +1,4 @@
 import Footer from "../components/Footer";
-import FormSection from "../components/FormSection";
 import Contato from "../components/Contato";
 import HistorySection from "../components/HistorySection";
 import AboutSection from "../components/AboutSection";
@@ -66,7 +65,6 @@ const Desktop = () => {
       <AboutSection />
       <HistorySection />
       <Contato />
-      <FormSection />
       <Footer />
       <SmallFooter />
 

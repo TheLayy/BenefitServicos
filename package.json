@@ -16,7 +16,6 @@
     "@types/node": "^16.11.14",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "firebase": "^10.14.0",
     "landingpage": "file:",
     "leaflet": "^1.9.4",
     "prop-types": "^15.8.1",
