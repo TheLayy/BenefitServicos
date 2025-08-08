@@ -31,11 +31,13 @@ const NavBar = ({ }) => {
 
       <div className={`${styles.navItens} ${isOpen ? styles.openSmMenu : styles.closedSmMenu}`}>
         <img className={styles.logoIcon} alt="" src="/logo.png" onClick={scrollToTop} />
-        <div className={styles.sobreNs} onClick={() => handleScroll("sobre-nos")}>Sobre nós</div>
-        <div className={styles.produtos} onClick={() => handleScroll("produtos")}>Produtos</div>
-        <div className={styles.contato} onClick={() => handleScroll("contato")}>Contato</div>
-        <div className={styles.callBtn} onClick={() => handleScroll("form")}>
-          Faça sua cotação
+        <div className={styles.navBtn} onClick={() => handleScroll("home")}>Home</div>
+        <div className={styles.navBtn} onClick={() => handleScroll("quem-somos")}>Quem Somos</div>        
+        <div className={styles.navBtn} onClick={() => handleScroll("produtos-e-servicos")}>Produtos e Serviços</div>
+        <div className={styles.navBtn} onClick={() => handleScroll("como-comprar")}>Como Comprar</div>
+        <div className={styles.navBtn} onClick={() => handleScroll("fale-conosco")}>Fale Conosco</div>        
+        <div className={styles.callBtn} onClick={() => handleScroll("acessar")}>
+          Acessar
         </div>
       </div>
 

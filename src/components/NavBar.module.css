@@ -66,9 +66,7 @@
   background-color: var(--btn-hover);
 }
 
-.contato,
-.produtos,
-.sobreNs {
+.navBtn {
   font-weight: 800;
   display: inline-block;
   height: 1.219rem;
@@ -76,9 +74,7 @@
   transition: color 0.3s ease;
 }
 
-.contato:hover,
-.produtos:hover,
-.sobreNs:hover {
+.navBtn:hover {
   color: var(--color);
   cursor: pointer;
 }
@@ -88,18 +84,6 @@
   cursor: pointer;
 }
 
-.sobreNs {
-  width: 5.75rem;
-}
-
-.contato,
-.produtos {
-  width: 6.013rem;
-}
-
-.contato {
-  width: 5.156rem;
-}
 
 .displayNone {
   display: none;
