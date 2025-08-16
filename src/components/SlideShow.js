@@ -14,11 +14,6 @@ const images = [
     '/slides/slide_2.jpg',
     '/slides/slide_3.jpg',
     '/slides/slide_4.jpg',
-    '/slides/slide_5.jpg',
-    '/slides/slide_6.jpg',
-    '/slides/slide_7.jpg',
-    '/slides/slide_8.jpg',
-    '/slides/slide_9.jpg',
 ];
 
 const SlideShow = () => {
