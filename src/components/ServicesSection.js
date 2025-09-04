@@ -17,7 +17,7 @@ const ServicesSection = ({ className = "" }) => {
           text="Soluções e Negócios"
         />
         <div className={styles.sectionSubtitle}>
-          Serviços de seguros completos, adaptados às suas necessidades
+          Serviços completos, adaptados às suas necessidades
         </div>
         <div className={styles.cards}>
           <div className={styles.notReverse}>

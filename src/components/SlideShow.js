@@ -51,7 +51,7 @@ const SlideShow = () => {
             >
                 {slides.map((slide, index) => (
                     <SwiperSlide key={index}>
-                        <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                        <div style={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
                             <img
                                 src={slide.image}
                                 alt={`Slide ${index + 1}`}
@@ -63,10 +63,11 @@ const SlideShow = () => {
                             />
                             <p style={{ 
                                 textAlign: 'center', 
-                                marginTop: '10px',
+                                marginTop: '0.5rem',
                                 fontSize: '1.2rem',
                                 fontWeight: '500',
-                                color: '#333'
+                                letterSpacing: '0.01em',
+                                color: '#290c5d',
                             }}>
                                 {slide.caption}
                             </p>
