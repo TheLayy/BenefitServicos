@@ -7,7 +7,7 @@ import BenefitsSection from "../components/BenefitsSection";
 import Section from "../components/Section";
 import ServicesSection from "../components/ServicesSection";
 import HeaderSection from "../components/HeaderSection";
-import styles from "./Desktop.module.css";
+import styles from "./Home.module.css";
 import SmallFooter from "../components/SmallFooter";
 import NavBar from "../components/NavBar";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
@@ -49,13 +49,13 @@ function ScrollTop(props) {
   );
 }
 
-const Desktop = () => {
+const Home = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/551132809870", "_blank");
   };
 
   return (
-    <div className={styles.desktop}>
+    <div className={styles.home}>
       <NavBar />
       <HeaderSection />
       <ServicesSection />
@@ -85,4 +85,4 @@ const Desktop = () => {
   );
 };
 
-export default Desktop;
+export default Home;

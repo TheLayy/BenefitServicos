@@ -21,16 +21,14 @@ const Section = ({ className = "" }) => {
       <div className={[styles.container, "container"].join(" ")}>
         <img className={styles.sectionSepIconBegin} src="/section-sep-icon-begin.svg" alt="" />
         <Tittle
-          text="Assistência Personalizada"
+          text="Gestão de Benefícios Simplificada"
           mode="claro"
         />
         <div className={styles.sectionSubtitle}>
-          Nossa equipe dedicada de especialistas está aqui para ajudar você em
-          cada etapa. Fornecemos assistência personalizada para garantir que você
-          obtenha a melhor cobertura pelo melhor preço.
+        Oferecemos uma gestão completa e inteligente dos seus benefícios, garantindo praticidade para sua empresa e mais satisfação para seus colaboradores.
         </div>
         <div className={styles.callBtn} onClick={() => handleScroll("form")}>
-          Faça sua cotação
+        Otimize sua gestão hoje mesmo
         </div>
         <img className={styles.sectionSepIconEnd} src="/section-sep-icon-end.svg" alt="" />
       </div>

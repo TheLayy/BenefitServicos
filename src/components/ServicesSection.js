@@ -19,31 +19,30 @@ const ServicesSection = ({ className = "" }) => {
         <div className={styles.sectionSubtitle}>
           Serviços completos, adaptados às suas necessidades
         </div>
+        
+        <SlideShow />
+
         <div className={styles.cards}>
           <div className={styles.notReverse}>
             <Card
-              insurance="Fit no serviço"
-              label1="Fit no"
-              label2="serviço"
+              label1="Fit no Serviço"
               color="dark"
               img="services/car-icon.png"
               backText="Trabalhamos seu pedido de forma automatizada, garantindo que o seu procedimento de compra seja ágil, eficiente e descomplicado"
             
             />
             <Card
-              insurance="Fit no custo"
-              label1="Fit no"
-              label2="custo"
+              label1="Fit no Custo"
               color="light"
               img="services/transportation-icon.png"
               backText="Oferecemos taxas de serviço justas, calculadas com base nos custos operacionais de cada pedido, em forma de uma taxa única"
             />
           </div>
         </div>
-        <SlideShow />
+
         <div className={styles.link} onClick={() => window.open("https://www.benefitservicos.com.br/index3.php", "_blank")}>
           <img className={styles.icon} alt="" src="/blue-arrow-icon.svg" />
-          <div className={styles.label}>Conheça nossos outros serviços</div>
+          <div className={styles.label}>Conheça nossos serviços</div>
         </div>
       </div>
     </div>

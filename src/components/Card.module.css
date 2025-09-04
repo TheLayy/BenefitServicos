@@ -1,6 +1,6 @@
 .card {
   margin: 1rem;
-  box-shadow: 0 5px 0#191a23;
+  box-shadow: 0 5px 0 #191a23;
   border-radius: var(--br-26xl);
   box-sizing: border-box;
   width: 25rem;
@@ -11,45 +11,21 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--padding-31xl);
-  transform-style: preserve-3d;
-  transform-origin: center right;
-  transition: transform 1s;
 }
 
-.cardFront {
-  overflow: hidden;
+.labelBox {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  flex-wrap: nowrap;
+  white-space: nowrap; /* impede quebra do título */
 }
 
-.flippedCard {
-  transform: translateX(-100%) rotateY(-180deg);
-}
-
-.cardBack {
-  transform: rotateY(180deg);
-}
-
-.label2,
-.label3 {
-  font-size: larger;
-}
-
-.displayNone {
-  display: none;
-}
-
-.labelBox .label1,
-.labelBox .label2,
-.labelBox .label3 {
+.label1 {
   font-family: var(--h2);
   font-weight: 400;
   width: fit-content;
   padding: 0.2rem 0.2rem;
-  margin-bottom: 0.2rem;
   border-radius: 0.4rem;
+  font-size: larger;
 }
 
 .darkColors {
@@ -61,12 +37,14 @@
   color: var(--dark-card-text-bg) !important;
 }
 
-.darkColors .labelBox .label1,
-.darkColors .labelBox .label2,
-.darkColors .labelBox .label3 {
+.darkColors .label1 {
   font-weight: 500;
   color: var(--dark-card-bg);
   background-color: var(--dark-card-text-bg);
+}
+
+.darkColors .backText {
+  color: var(--dark-card-text-bg);
 }
 
 .lightColors {
@@ -78,31 +56,21 @@
   color: var(--light-card-text-bg) !important;
 }
 
-.lightColors .labelBox .label1,
-.lightColors .labelBox .label2,
-.lightColors .labelBox .label3 {
+.lightColors .label1 {
   color: var(--claro);
   background-color: var(--light-card-text-bg);
 }
 
-.cardImg {
-  width: 40%;
+.lightColors .backText {
+  color: var(--light-card-text-bg);
 }
 
-.cardFront .headingAndLink {
-  cursor: pointer;
-}
 .headingAndLink {
   height: 13rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
-}
-
-.flippedCard {
-  background-color: var(--claro) !important;
-  border: 1px solid var(--dark-card-stroke);
 }
 
 .bottomDiv {
@@ -117,28 +85,11 @@
   cursor: pointer;
 }
 
-.lightColors .backCardImg {
-  background-color: var(--light-card-bg) !important;
-  border: 2px solid var(--light-card-stroke);
-}
-
-.darkColors .backCardImg {
-  background-color: var(--dark-card-bg) !important;
-  border: 2px solid var(--dark-card-stroke);
-}
-
-.backCardImg {
-  width: 25%;
-  border-radius: 40%;
-  padding: 2% 5%;
-  align-self: flex-end;
-  cursor: pointer;
-}
-
 .backText {
-  font-size: small;
+  font-size: medium;
   line-height: 1.3rem;
   text-align: justify;
+  font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {

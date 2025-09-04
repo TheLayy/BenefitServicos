@@ -1,7 +1,7 @@
 // App.js
 import { useEffect } from "react";
 import {Routes, Route, useNavigationType, useLocation } from "react-router-dom";
-import Desktop from "./pages/Desktop";
+import Home from "./pages/Home";
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Desktop />} />
+      <Route path="/" element={<Home />} />
     </Routes>
   );
 }
