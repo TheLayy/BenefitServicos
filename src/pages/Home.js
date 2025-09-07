@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+import React from 'react';
 import Contato from "../components/Contato";
 import HistorySection from "../components/HistorySection";
 import AboutSection from "../components/AboutSection";
@@ -8,11 +8,10 @@ import Section from "../components/Section";
 import ServicesSection from "../components/ServicesSection";
 import HeaderSection from "../components/HeaderSection";
 import styles from "./Home.module.css";
-import SmallFooter from "../components/SmallFooter";
-import NavBar from "../components/NavBar";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { Fab, Fade, Box } from "@mui/material";
 import { useEffect, useState } from "react";
+import Layout from "../components/Layout";
 
 function ScrollTop(props) {
   const { children } = props;
@@ -49,40 +48,38 @@ function ScrollTop(props) {
   );
 }
 
-const Home = () => {
-  const handleWhatsAppClick = () => {
-    window.open("https://wa.me/551132809870", "_blank");
-  };
-
+const Home = React.memo(() => {
   return (
-    <div className={styles.home}>
-      <NavBar />
-      <HeaderSection />
-      <ServicesSection />
-      <Section />
-      <BenefitsSection />
-      <SocialSection />
-      <AboutSection />
-      <HistorySection />
-      <Contato />
-      <Footer />
-      <SmallFooter />
+    <Layout>
+      <div className={styles.home}>
+        <HeaderSection />
+        <ServicesSection />
+        <Section />
+        <BenefitsSection />
+        <SocialSection />
+        <AboutSection />
+        <HistorySection />
+        <Contato />
 
-      <ScrollTop>
-        <Fab
-          size="large"
-          aria-label="scroll back to top"
-          sx={{ width: 46, height: 46 }}
-        >
-          <ArrowUpwardIcon sx={{ fontSize: 30 }} />
-        </Fab>
-      </ScrollTop>
-
-      <button className={styles.floatingButton} onClick={handleWhatsAppClick}>
-        <img src="/whatsapp-logo.png" alt="WhatsApp" />
-      </button>
-    </div>
+        <ScrollTop>
+          <Fab
+            size="large"
+            aria-label="scroll back to top"
+            sx={{ 
+              width: 46, 
+              height: 46, 
+              backgroundColor: 'white', 
+              '&:hover': { 
+                backgroundColor: '#f5f5f5' 
+              } 
+            }}
+          >
+            <ArrowUpwardIcon sx={{ fontSize: 30, color: 'var(--color)' }} />
+          </Fab>
+        </ScrollTop>
+      </div>
+    </Layout>
   );
-};
+});
 
 export default Home;

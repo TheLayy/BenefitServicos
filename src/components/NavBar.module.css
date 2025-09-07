@@ -72,11 +72,36 @@
   height: 1.219rem;
   color: var(--escuro);
   transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 .navBtn:hover {
   color: var(--color);
   cursor: pointer;
+}
+
+.navBtn.active {
+  color: var(--color);
+  font-weight: 900;
+  position: relative;
+}
+
+.navBtn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background-color: var(--color);
+  border-radius: 2px;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  /* margin-right: 1rem; */
 }
 
 .logoIcon,
@@ -89,22 +114,80 @@
   display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
+  .NavBar {
+    width: 95%;
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0 0 var(--br-3xs) var(--br-3xs);
+  }
+
   .displayBlock {
     display: block;
-    align-self: flex-start;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    z-index: 1001;
   }
 
   .closedSmMenu {
     display: none;
   }
 
+  .openSmMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 5rem 1rem 2rem;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .navItens {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .navBtn {
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .navBtn.active::after {
+    left: 0;
+    transform: none;
+    width: 100%;
+  }
+
+  .callBtn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
   .NavBar {
     justify-content: flex-start;
     border-radius: 0;
     width: 100%;
     top: 0;
-    margin: none;
+    margin: 0;
   }
 
   .navItens {
@@ -112,7 +195,7 @@
     height: 100%;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .navItens .logoIcon {
