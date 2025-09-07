@@ -68,7 +68,8 @@
 }
 
 .callBtn {
-  box-shadow: 2px 2px 0 var(--escuro);
+  border: none !important;
+  box-shadow: 0px 2px 0 var(--escuro);
   color: var(--colors-heading);
   font-weight: 800;
   border-radius: var(--br-3xs);
