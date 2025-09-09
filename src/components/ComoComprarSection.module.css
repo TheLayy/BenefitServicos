@@ -1,0 +1,187 @@
+.wrapper {
+  width: 100%;
+}
+
+.block {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 600px)); /* center content with 1200px max */
+  justify-content: center; /* center grid within full-width background */
+  align-items: center;
+}
+
+/* Badge-only step: single centered column */
+.onlyBadge {
+  grid-template-columns: 1fr;
+}
+
+.left,
+.right {
+  padding: 2.5rem 2rem;
+}
+
+.left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stepCard {
+  background: var(--colors-white);
+  color: var(--escuro);
+  border-radius: 0.4rem; /* match Card label radius */
+  padding: 1rem 1.25rem;
+  box-shadow: 0 5px 0 #191a23; /* match Card shadow */
+  text-align: center;
+  width: 260px; /* unified badge size */
+  height: 120px; /* unified badge size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--h2); /* match Card label font */
+  font-size: larger; /* match Card label sizing */
+  font-weight: 400;
+}
+
+/* Clickable badge link wrapper */
+.badgeLink {
+  text-decoration: none;
+}
+
+.stepCard strong {
+  display: inline-block;
+  font-family: var(--h2);
+  font-weight: 400;
+  font-size: larger;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem; /* match Card label */
+  background: var(--light-card-text-bg);
+  color: var(--claro);
+}
+
+/* Gap between label and badge title */
+.stepCard > div:last-child {
+  margin-top: 0.35rem;
+}
+
+/* Variant overrides to mirror Card behavior */
+.orange .stepCard strong {
+  background: var(--dark-card-text-bg);
+  color: var(--dark-card-bg);
+  font-weight: 500;
+}
+
+/* Orange badges: label uses light-card pill style */
+.purple  .stepCard strong {
+  background-color: var(--light-card-text-bg);
+  color: var(--claro);
+}
+
+@keyframes pulseScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.pulse {
+  animation: pulseScale 3s ease-in-out infinite;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.title {
+  margin: 0 0 0.5rem 0;
+}
+
+.copy {
+  text-align: justify;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-5xl);
+  color: var(--colors-white);
+}
+
+.purple {
+  background: var(--color-midnightblue-200);
+}
+
+.orange {
+  background: var(--color);
+}
+
+/* Make text purple on orange background */
+.orange .copy {
+  color: #0F0324;
+  font-weight: 500;
+}
+
+/* Make step badge text purple on orange blocks */
+.orange .stepCard {
+  background: var(--color-midnightblue-200);
+  color: var(--colors-white);
+  border: 1px solid var(--dark-card-stroke);
+  box-shadow: 0 5px 0 #191a23;
+}
+
+/* Match Card dark variant label look when on purple block */
+.purple .stepCard {
+  background: var(--dark-card-text-bg);
+  color: var(--dark-card-bg);
+  border: 1px solid var(--dark-card-stroke);
+}
+
+/* Decorative icons on orange sections */
+.right {
+  position: relative;
+}
+
+/* removed pseudo-element background icons; using react-icons instead */
+
+/* React-icons positions for decorative icons */
+.iconsTopRight,
+.iconsBottomLeft {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0.9;
+}
+
+.iconsTopRight { top: 10px; right: 18px; color: var(--claro); }
+.iconsBottomLeft { bottom: 10px; left: 18px; color: var(--escuro); }
+
+.header {
+  padding: 10rem 0 1rem 0; /* more space from top */
+}
+
+.header .pageTitle {
+  width: 100%;
+  text-align: center;
+}
+
+.ctaWrap {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.cta {
+  background: var(--color-midnightblue-200);
+  color: var(--colors-white);
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.footerNote {
+  padding: 0 2rem 2.5rem 2rem;
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (max-width: 900px) {
+  .block {
+    grid-template-columns: 1fr;
+  }
+  .left, .right { padding: 1.25rem; }
+}
