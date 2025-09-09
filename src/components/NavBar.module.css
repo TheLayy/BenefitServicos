@@ -98,6 +98,16 @@
   border-radius: 2px;
 }
 
+/* Remove active underline on mobile */
+@media only screen and (max-width: 768px) {
+  .navBtn.active::after {
+    display: none;
+    content: none;
+    width: 0;
+    height: 0;
+  }
+}
+
 .logoLink {
   display: flex;
   align-items: center;
@@ -116,22 +126,46 @@
 
 @media only screen and (max-width: 900px) {
   .NavBar {
-    width: 95%;
-    padding: 0.5rem;
+    width: 100%;
+    padding: 0;                 /* no inner spacing for the bar */
     position: fixed;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 0 0 var(--br-3xs) var(--br-3xs);
+    top: 0;                     /* stick to very top */
+    left: 0;
+    transform: none; /* avoid creating containing block for fixed children */
+    border-radius: 0;           /* remove rounded bottom on mobile */
+    overflow: visible;          /* ensure children aren't clipped */
+    background-color: transparent; /* remove white glass bar */
+    box-shadow: none;           /* remove shadow strip */
+    backdrop-filter: none;      /* remove blur */
+    -webkit-backdrop-filter: none;
+    height: 3.5rem;             /* only as tall as the toggle */
+    min-width: 100%;
+    max-width: 100%;
   }
 
   .displayBlock {
-    display: block;
-    padding: 1rem;
-    position: absolute;
-    right: 0;
+    display: flex;               /* center icon */
+    align-items: center;
+    justify-content: center;
+    width: 46px;                 /* match UpScroll size */
+    height: 46px;
+    border-radius: 50%;
+    background: #ffffff;         /* white fab */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    position: fixed;             /* keep on screen */
+    right: 0.5rem;
     top: 0.5rem;
-    z-index: 1001;
+    z-index: 1200;               /* above .openSmMenu */
+  }
+
+  /* Bigger icon size for hamburger/close */
+  .displayBlock svg {
+    font-size: 30px !important;  /* match UpScroll icon size */
+    color: var(--color) !important;
+  }
+
+  .displayBlock:hover {
+    background-color: #f5f5f5;   /* subtle hover like UpScroll */
   }
 
   .closedSmMenu {
@@ -142,13 +176,15 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    top: 3.5rem; /* start below navbar / toggle */
+    left: 0; right: 0;
     background-color: rgba(255, 255, 255, 0.98);
     padding: 5rem 1rem 2rem;
-    height: 100vh;
-    z-index: 1000;
+    width: 100vw;
+    height: 50vh;
+    max-height: calc(100dvh - 3.5rem);
+    min-height: 50svh;
+    z-index: 1100; /* above navbar */
     overflow-y: auto;
     align-items: flex-start;
     gap: 1.5rem;
@@ -156,17 +192,16 @@
 
   .navItens {
     flex-direction: column;
-    height: auto;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem 0;
   }
 
   .navBtn {
-    padding: 0.75rem 0;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 100%;
+    height: 100%;
     text-align: left;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
   }
 
   .navBtn.active::after {
@@ -177,33 +212,10 @@
 
   .callBtn {
     width: 100%;
-    margin-top: 1rem;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .NavBar {
-    justify-content: flex-start;
-    border-radius: 0;
-    width: 100%;
-    top: 0;
-    margin: 0;
-  }
-
-  .navItens {
-    flex-direction: column;
     height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start;
-  }
-
-  .navItens .logoIcon {
-    display: none;
-  }
-
-  .navItens div {
-    width: fit-content;
-    margin: 5px;
+    margin-top: 1rem;
+    font-size: 1.4rem !important;
+    padding: 0.5rem 0;
   }
 }
+

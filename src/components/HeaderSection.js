@@ -8,7 +8,8 @@ const HeaderSection = ({ className = "" }) => {
   return (
     <div className={[styles.header, className].join(" ")}>
       <div className={styles.container}>
-          <img className={styles.headerImg} alt="" src="/header-woman.png" />
+        <img className={styles.headerImg} alt="" src="/header-woman.png" />
+        <img className={styles.logoMobile} alt="Benefit Serviços" src="/logo.png" />
         <div className={styles.texts}>
           <div className={styles.heroText}>Mais que gestão de benefícios,</div>
           <div className={styles.heroText2}>cuidamos de cada pedido e entregamos soluções inteligentes para fazer seu negócio crescer.</div>
@@ -18,7 +19,6 @@ const HeaderSection = ({ className = "" }) => {
             Conheça Nossos Serviços
           </button>
         </div>
-
       </div>
     </div>
   );
