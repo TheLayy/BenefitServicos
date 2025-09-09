@@ -89,6 +89,18 @@
   will-change: transform;
 }
 
+/* Mobile: larger, bolder badges */
+@media (max-width: 768px) {
+  .stepCard {
+    font-size: 1.85rem; /* user-specified badge title size */
+    font-weight: 500;
+  }
+  .stepCard strong {
+    font-size: 1.95rem; /* user-specified label (Passo 1 etc) */
+    font-weight: 600;
+  }
+}
+
 .title {
   margin: 0 0 0.5rem 0;
 }
