@@ -1,19 +1,9 @@
 import PropTypes from "prop-types";
 import styles from "./HeaderSection.module.css";
+import { useNavigate } from "react-router-dom";
 
 const HeaderSection = ({ className = "" }) => {
-
-  const handleScroll = (id) => {
-    const element = document.getElementById(id);
-    const offset = 0;
-    const elementPosition = element.getBoundingClientRect().top;
-    const offsetPosition = elementPosition + window.scrollY - offset;
-
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth"
-    });
-  };
+  const navigate = useNavigate();
 
   return (
     <div className={[styles.header, className].join(" ")}>
@@ -24,7 +14,7 @@ const HeaderSection = ({ className = "" }) => {
           <div className={styles.heroText2}>cuidamos de cada pedido e entregamos soluções inteligentes para fazer seu negócio crescer.</div>
           <div className={styles.heroText3}>Benefit Serviços</div>
           <div className={styles.heroText4}>SUA SATISTAÇÃO É NOSSO MAIOR BENEFÍCIO!</div>
-          <button className={styles.callBtn} onClick={() => handleScroll("acessar")}>
+          <button className={styles.callBtn} onClick={() => navigate('/produtos-servicos')}>
             Conheça Nossos Serviços
           </button>
         </div>

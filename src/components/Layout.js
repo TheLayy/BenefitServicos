@@ -3,6 +3,7 @@ import NavBar from './NavBar';
 import Footer from './Footer';
 import SmallFooter from './SmallFooter';
 import WhatsAppButton from './WhatsAppButton';
+import BackToTopButton from './BackToTopButton';
 
 const Layout = ({ children }) => {
   return (
@@ -10,6 +11,7 @@ const Layout = ({ children }) => {
       <NavBar />
       <main>{children}</main>
       <WhatsAppButton />
+      <BackToTopButton />
       <Footer />
       <SmallFooter />
     </div>

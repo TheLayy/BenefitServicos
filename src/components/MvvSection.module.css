@@ -1,0 +1,87 @@
+.mvvSection {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    to right,
+    var(--color-midnightblue-200) 50%,
+    var(--claro) 50%
+  );
+  width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-5xl);
+  color: var(--colors-white);
+  font-family: var(--font-inter);
+}
+
+.container {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.textWrap,
+.mediaWrap {
+  padding: 3rem;
+  width: 50%;
+}
+
+.mediaWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaWrap img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.card {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.1em;
+  color: var(--colors-white);
+  text-align: center;
+  font-weight: 800;
+}
+
+.card h4::after { display: none; }
+
+.card p {
+  color: var(--colors-white);
+  font-size: var(--text-paragraph-size);
+  line-height: 1.6;
+}
+
+/* No additional layout change needed on 900px; stays vertical */
+
+@media only screen and (max-width: 600px) {
+  .mvvSection {
+    background: var(--color-midnightblue-200);
+    box-shadow: none;
+    font-size: var(--font-size-4xl);
+  }
+
+  .container {
+    flex-direction: column !important;
+  }
+
+  .textWrap {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .mediaWrap {
+    display: none;
+  }
+}

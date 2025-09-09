@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import PropTypes from "prop-types";
 import styles from "./SaibaMais.module.css";
+import { Link } from "react-router-dom";
 
 const SaibaMais = ({
   className = "",
@@ -8,12 +9,10 @@ const SaibaMais = ({
   label,
 }) => {
   return (
-    <div
-      className={[styles.SaibaMais, className].join(" ")}
-    >
+    <Link to="/produtos-servicos" className={[styles.SaibaMais, className].join(" ")}>
       <img className={styles.icon} alt="" src={icon} />
       <div className={styles.label}>{label}</div>
-    </div>
+    </Link>
   );
 };
 

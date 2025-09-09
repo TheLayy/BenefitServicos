@@ -1,0 +1,64 @@
+.filosofiaSection {
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.08);
+  background: linear-gradient(
+    to right,
+    var(--claro) 50%,
+    var(--color-midnightblue-200) 50%
+  );
+  width: 100%;
+  text-align: justify;
+  font-size: var(--font-size-5xl);
+  color: var(--colors-white);
+  font-family: var(--font-inter);
+}
+
+.container {
+  display: flex;
+  flex-direction: row !important;
+}
+
+.textWrap,
+.mediaWrap {
+  padding: 3rem;
+  width: 50%;
+}
+
+.mediaWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mediaWrap img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.textWrap p {
+  color: var(--colors-white);
+  font-size: var(--text-paragraph-size);
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 600px) {
+  .filosofiaSection {
+    background: linear-gradient(
+      to bottom,
+      var(--claro) 50%,
+      var(--color-midnightblue-200) 50%
+    );
+    box-shadow: none;
+    font-size: var(--font-size-4xl);
+  }
+
+  .container {
+    flex-direction: column !important;
+  }
+
+  .textWrap,
+  .mediaWrap {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+}
