@@ -1,0 +1,98 @@
+.section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+.first .imageCell,
+.first .textCell {
+  min-height: 85vh;
+  max-height: 85vh;
+}
+
+.compact .textCell {
+  padding: 1.25rem 1.75rem;
+}
+
+.imageCell,
+.textCell {
+  min-height: 50vh;
+  max-height: 85vh;
+}
+
+.imageCell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.textCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2.5rem;
+  text-align: justify;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-5xl);
+}
+
+.textInner {
+  max-width: 520px;
+}
+
+/* Ensure orange sections render purple text for copy */
+.orange .textInner,
+.orange .textInner p,
+.orange .textInner li,
+.orange .textInner ul {
+  color: #0F0324;
+}
+
+/* Color variants to match screenshot */
+.purple {
+  background: var(--color-midnightblue-200);
+  color: var(--colors-white);
+}
+
+.orange {
+  background: var(--color);
+  color: var(--escuro);
+  font-weight: 500;
+}
+
+.white {
+  background: var(--claro);
+  color: var(--escuro);
+}
+
+.ulWhiteOnPurple {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+
+.ulWhiteOnPurple li {
+  margin: 0.5rem 0;
+}
+
+/* General paragraph and list spacing */
+.textInner p {
+  margin: 0.25rem 0 0.75rem 0;
+}
+
+.textInner ul {
+  margin: 0.25rem 0 0.75rem 1.25rem;
+}
+
+.textInner li {
+  margin: 0.4rem 0;
+}
+
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+  .textCell {
+    padding: 2rem 1.25rem;
+  }
+}

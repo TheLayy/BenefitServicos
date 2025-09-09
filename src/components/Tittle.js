@@ -11,12 +11,16 @@ const Tittle = ({
     return mode === "claro" ? "claro" : "escuro";
   }, [mode]);
 
+  const borderModeClass = useMemo(() => {
+    return mode === "escuro" ? styles.borderEscuro : styles.borderClaro;
+  }, [mode]);
+
   return (
     <div
       className={[styles.tittle, className].join(" ")}
     >
       <div className={[styles.text, modeClass].join(" ")}>{text}</div>
-      <div className={styles.border} />
+      <div className={[styles.border, borderModeClass].join(" ")} />
     </div>
   );
 };
