@@ -4,7 +4,7 @@
 
 .block {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 600px)); /* center content with 1200px max */
+  grid-template-columns: repeat(2, minmax(0, 472px)); /* center content with 944px max */
   justify-content: center; /* center grid within full-width background */
   align-items: center;
 }

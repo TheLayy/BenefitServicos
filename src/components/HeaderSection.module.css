@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   width: 85%;
-  max-width: 1200px;
+  max-width: 944px;
   height: 100%;
   gap: 0 5%;
   z-index: 1;
@@ -71,10 +71,10 @@
   border: none !important;
   box-shadow: 0px 2px 0 var(--escuro);
   color: var(--colors-heading);
-  font-weight: 800;
+  font-weight: 700;
   border-radius: var(--br-3xs);
   background-color: var(--color);
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   display: flex;
   flex-direction: row;
   align-items: center;

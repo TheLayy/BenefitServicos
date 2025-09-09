@@ -15,7 +15,7 @@ const Contato = ({ className = "" }) => {
         <div className={styles.content}>
           <div className={styles.contacts}>
             <div className={styles.logo}>
-              <img src="/logo-full.png" alt="" />
+              <img src="/logo.png" alt="" />
             </div>
             <div className={styles.info}>
               <div className={styles.infoBlock}>

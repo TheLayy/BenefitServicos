@@ -40,7 +40,7 @@ const ServicesSection = ({ className = "" }) => {
           </div>
         </div>
 
-        <div className={styles.link} onClick={() => window.open("https://www.benefitservicos.com.br/index3.php", "_blank")}>
+        <div className={styles.link} onClick={() => window.open("https://benefitbroker.com.br/", "_blank")}>
           <img className={styles.icon} alt="" src="/blue-arrow-icon.svg" />
           <div className={styles.label}>Conheça nossos serviços</div>
         </div>

@@ -7,14 +7,14 @@
 
 .container {
   min-height: 100vh;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .content {
-  max-width: 100%;
+  max-width: 944px; /* constrain content width */
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--gap-mini);
+  margin: 0 auto; /* center content */
 }
 
 .contacts {
@@ -38,7 +38,8 @@
 }
 
 .tittle {
-  margin: var(--gap-mini);
+  margin: var(--gap-mini) auto;
+  max-width: 944px; /* match content width */
   font-weight: 900;
   color: var(--claro);
   font-size: var(--font-size-17xl);
@@ -109,6 +110,7 @@
 
   .tittle {
     margin: var(--gap-mini) auto;
+    max-width: 100%; /* full width on small screens */
     font-size: var(--font-size-5xl);
   }
 
@@ -118,6 +120,7 @@
 
   .content {
     flex-direction: column;
+    max-width: 100%; /* full width on small screens */
   }
 
   .container {

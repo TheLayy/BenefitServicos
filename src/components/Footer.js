@@ -10,7 +10,7 @@ const Footer = ({
       <div className={[styles.container, className].join("container")}>
         <div className={styles.content}>
           <div className={styles.info}>
-            <img className={styles.logoFooter} alt="" src="/logo-full.png" />
+            <img className={styles.logoFooter} alt="" src="logo.png" />
             <div className={styles.infoBlock}>
               <img src="/phone-icon.svg" alt="" />
               <a href="tel:1132809870">(11)3280-9870</a>
@@ -27,7 +27,7 @@ const Footer = ({
 
         </div>
 
-        <div className={styles.link} onClick={() => window.open("https://www.benefitservicos.com.br/index3.php", "_blank")}>
+        <div className={styles.link} onClick={() => window.open("https://benefitbroker.com.br/", "_blank")}>
           <img className={styles.icon} alt="" src="/blue-arrow-icon.svg" />
           <div className={styles.label}>Conheça nossos outros serviços</div>
         </div>
