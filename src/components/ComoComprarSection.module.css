@@ -29,17 +29,20 @@
   background: var(--colors-white);
   color: var(--escuro);
   border-radius: 0.4rem; /* match Card label radius */
-  padding: 1rem 1.25rem;
+  padding: 0.75rem 1.25rem; /* reduced top/bottom padding */
   box-shadow: 0 5px 0 #191a23; /* match Card shadow */
   text-align: center;
-  width: 260px; /* unified badge size */
-  height: 120px; /* unified badge size */
+  width: auto;
+  min-width: 260px;
+  max-width: 600px; /* limit max width */
+  height: auto;
+  min-height: 120px; /* unified badge size */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: var(--h2); /* match Card label font */
-  font-size: larger; /* match Card label sizing */
+  font-size: x-large; /* increased font size */
   font-weight: 400;
 }
 
@@ -51,12 +54,9 @@
 .stepCard strong {
   display: inline-block;
   font-family: var(--h2);
-  font-weight: 400;
   font-size: larger;
   padding: 0.2rem 0.4rem;
   border-radius: 0.4rem; /* match Card label */
-  background: var(--light-card-text-bg);
-  color: var(--claro);
 }
 
 /* Gap between label and badge title */
@@ -66,15 +66,12 @@
 
 /* Variant overrides to mirror Card behavior */
 .orange .stepCard strong {
-  background: var(--dark-card-text-bg);
-  color: var(--dark-card-bg);
-  font-weight: 500;
+  color: var(--claro);
 }
 
 /* Orange badges: label uses light-card pill style */
 .purple  .stepCard strong {
-  background-color: var(--light-card-text-bg);
-  color: var(--claro);
+  color: var(--escuro);
 }
 
 @keyframes pulseScale {
@@ -196,4 +193,33 @@
     grid-template-columns: 1fr;
   }
   .left, .right { padding: 1.25rem; }
+}
+
+/* Styles for carousel slides */
+.slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  min-height: 60vh;
+}
+
+.slideContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+.slideHeader {
+  margin-bottom: 2rem;
+}
+
+.slideBody {
+  text-align: center;
+}
+
+.slide .copy {
+  text-align: center;
 }
